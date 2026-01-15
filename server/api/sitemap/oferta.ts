@@ -1,8 +1,8 @@
-import { serverQueryContent } from '#content/server'
+import { queryCollection } from '@nuxt/content/server'
 import type SitemapEntry from '@nuxtjs/sitemap'
 
 export default defineEventHandler(async (event): Promise<SitemapEntry[]> => {
-  const docs = await serverQueryContent(event, '/oferta')
+  const docs = await queryCollection(event, '/oferta')
     .only(['_path', 'updatedAt'])
     .find()
 
