@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
   studio: {
+    route: '/admin',
     repository: {
       provider: 'github',
       owner: 'magiczny-moment',
