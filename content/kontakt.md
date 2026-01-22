@@ -1,6 +1,5 @@
 ---
-fields:
-  title: Kontakt
+title: Kontakt
 ---
 
 Zapraszamy do kontaktu od poniedziałku do piątku w godzinach 08:00 - 20:00

@@ -1,9 +1,9 @@
 <template>
   <main class="bg-gray-900 content-grid text-accent">
     <Navigation />
-    <Witamy class="full-width" id="witamy" v-bind="witamy" link="oferta" />
+    <Witamy class="full-width" v-bind="witamy" id="witamy" link="oferta" />
     <OfferCarousel :offers="offers" id="oferta" />
-    <Contact  id="kontakt" class="full-width">
+    <Contact :title="contact?.title" id="kontakt" class="full-width">
       <ContentRenderer v-if="contact" class="flex flex-col gap-4" :value="contact" />
     </Contact>
   </main>

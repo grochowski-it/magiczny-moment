@@ -13,8 +13,8 @@ export default defineContentConfig({
       })
     }),
     oferta: defineCollection({
-      source: 'oferta/*.md', // ścieżka do plików md
       type: 'page',
+      source: 'oferta/*.md', // ścieżka do plików md
       schema: z.object({
         title: z.string(),
         image: z.string(),

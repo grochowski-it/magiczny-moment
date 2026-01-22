@@ -11,7 +11,7 @@
       <div
         class="flex flex-col w-full p-8 mx-auto mb-8 text-lg text-left md:text-xl backdrop-blur-md rounded-xl shadow-[0px_0px_20px_rgba(0,0,0,0.7)]">
         <h2 class="mb-8 text-4xl font-bold !leading-snug md:text-6xl">
-          Kontakt
+          {{ title }}
         </h2>
         <slot>
         </slot>
@@ -20,3 +20,11 @@
     </div>
   </section>
 </template>
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true
+  }
+})
+</script>
