@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'magiczny-moment',
       repo: 'magiczny-moment',
-      branch: 'gh-pages' // Optional, defaults to 'main'
+      branch: 'dev/update-nuxt-studio' // Optional, defaults to 'main'
     }
   },
   routeRules: {
