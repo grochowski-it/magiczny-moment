@@ -1,7 +1,7 @@
 <template>
   <main class="content-grid">
     <Navigation />
-    <GenericOffer class="full-width" v-bind="section?.fields" />
+    <GenericOffer v-if="section" class="full-width" :title="section.title" :image="section.image" :content="section.content" :price="section.price" />
   </main>
 </template>
 
@@ -10,7 +10,7 @@
 const route = useRoute()
 
 const { data: section } = await useAsyncData('offerpreview', async () => {
-  return await queryContent('oferta').where({ '_stem': { $contains: route.params.id } }).findOne()
+  return queryCollection('oferta').path(route.path).first()
 })
 
 </script>

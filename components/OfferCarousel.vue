@@ -6,7 +6,7 @@
         <div
           class="grid auto-cols-[70%] md:auto-cols-[calc(50%-2rem)] h-[calc(var(--section-height)*0.7)] grid-flow-col gap-4 md:gap-16">
           <template v-for="(offer, index) in offers">
-            <Card :image="offer.image" :title="offer.title" :content="offer.content" :link="offer.link"
+            <Card :image="offer.meta.image" :title="offer.title" :content="offer.meta.content" :link="offer.path"
               :class="{ 'mr-4 md:mr-16': index == offers.length - 1 }" />
           </template>
         </div>
@@ -25,13 +25,9 @@
 import emblaCarouselVue from 'embla-carousel-vue'
 const [emblaRef, emblaApi] = emblaCarouselVue({ loop: true })
 
-const props = defineProps({
-  offers: {
-    type: Array,
-    default: () => []
-  }
-});
-const { offers } = toRefs(props)
+const { data: offers } = await useAsyncData('offers', async () => {
+  return queryCollection('oferta').all()
+})
 
 const scrollNext = () => {
   emblaApi.value?.scrollNext()
