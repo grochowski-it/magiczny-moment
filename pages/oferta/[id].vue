@@ -1,7 +1,7 @@
 <template>
   <main class="content-grid">
     <Navigation />
-    <GenericOffer v-if="section" class="full-width" :title="section.title" :image="section.image" :content="section.content" :price="section.price" />
+    <GenericOffer v-if="section" class="full-width" :title="section.title" :image="section.meta.image" :content="section.meta.content" :price="section.meta.price" />
   </main>
 </template>
 

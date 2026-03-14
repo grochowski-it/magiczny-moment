@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden isolate h-section md:!h-screen">
+  <section id="kontakt" class="relative overflow-hidden isolate h-section md:!h-screen full-width col-span-full">
     <Icon
       class="absolute left-[-100px] sm:left-[-300px] top-[-50px] sm:top-[120px] rotate-[70deg] size-full sm:size-1/3"
       name="my-icon:listek" />

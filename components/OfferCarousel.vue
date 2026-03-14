@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-end w-full py-4 md:justify-center h-section">
+  <div class="flex flex-col justify-end w-full py-4 md:justify-center h-section" id="oferta">
     <h1 class="mb-8 text-4xl font-bold leading-snug md:text-6xl">Oferta</h1>
     <div class="relative">
       <div class="overflow-hidden" ref="emblaRef">

@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-viewport',
     '@nuxt/icon',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-studio'
   ],
 
   routeRules: {
@@ -19,7 +20,10 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: 'https://mm-event.pl',
     gzip: true,
-    autoLastmod: true
+    autoLastmod: true,
+    sources: [
+      '/api/sitemap/oferta'
+    ]
   },
   icon: {
     provider: 'iconify',
@@ -44,4 +48,13 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2024-11-10',
+  studio: {
+    enabled: true,
+    repository: {
+      owner: 'grochowski-it',
+      repo: 'magiczny-moment',
+      branch: 'master',
+      provider: 'github'
+    }
+  }
 })
