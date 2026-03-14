@@ -1,7 +1,7 @@
 <template>
   <main class="bg-gray-900 content-grid text-accent">
     <Navigation />
-    <ContentRenderer v-if="page" :value="page" />
+    <ContentRenderer v-if="page" :value="page" class="contents" />
   </main>
 </template>
 
