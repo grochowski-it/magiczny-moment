@@ -3,9 +3,9 @@
     <div class="col-span-full md:col-auto md:col-start-2">
       <h1 class="mb-8 text-4xl font-bold leading-snug md:text-6xl px-4 md:px-0">Oferta</h1>
       <div class="relative w-full px-4 md:px-0">
-        <div class="overflow-hidden w-full" ref="emblaRef">
+        <div class="overflow-hidden w-full" ref="emblaRef" v-if="offers && offers.length">
           <div class="flex h-[calc(var(--section-height)*0.7)] gap-4 md:gap-16">
-            <template v-for="(offer, index) in offers">
+            <template v-for="(offer, index) in offers" :key="offer.path">
               <div class="flex-[0_0_70%] md:flex-[0_0_calc(50%-2rem)] min-w-0">
                 <Card :image="offer.meta.image" :title="offer.title" :content="offer.meta.content" :link="offer.path"
                   :class="{ 'mr-4 md:mr-16': index == offers?.length - 1 }" />
