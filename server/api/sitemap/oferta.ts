@@ -1,13 +1,14 @@
-import { serverQueryContent } from '#content/server'
-import type SitemapEntry from '@nuxtjs/sitemap'
+import { asSitemapUrl, defineSitemapEventHandler } from '#imports'
+import { queryCollection } from '@nuxt/content/server'
 
-export default defineEventHandler(async (event): Promise<SitemapEntry[]> => {
-  const docs = await serverQueryContent(event, '/oferta')
-    .only(['_path', 'updatedAt'])
-    .find()
+export default defineSitemapEventHandler(async (e) => {
+  // Use Nuxt Content v3 server queryCollection natively
+  const offers = await queryCollection(e, 'oferta').all()
 
-  return docs.map(doc => ({
-    loc: doc._path,
-    lastmod: doc.updatedAt ?? new Date().toISOString().split('T')[0], // YYYY-MM-DD
-  }))
+  return offers?.map((offer) => {
+    return asSitemapUrl({
+      loc: offer.path,
+      lastmod: new Date(),
+    })
+  }) || []
 })

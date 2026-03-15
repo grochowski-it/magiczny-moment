@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   image: String,
   title: String,
   content: String,

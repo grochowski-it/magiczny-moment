@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden isolate h-section md:!h-screen">
+  <section id="kontakt" class="relative overflow-hidden isolate h-section md:!h-screen full-width col-span-full">
     <Icon
       class="absolute left-[-100px] sm:left-[-300px] top-[-50px] sm:top-[120px] rotate-[70deg] size-full sm:size-1/3"
       name="my-icon:listek" />
@@ -13,8 +13,10 @@
         <h2 class="mb-8 text-4xl font-bold !leading-snug md:text-6xl">
           Kontakt
         </h2>
-        <slot>
-        </slot>
+        <div class="flex flex-col gap-4">
+          <slot>
+          </slot>
+        </div>
       </div>
 
     </div>
