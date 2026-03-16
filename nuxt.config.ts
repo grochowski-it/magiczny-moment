@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-viewport',
     '@nuxt/icon',
-    '@nuxthq/studio',
+    'nuxt-studio',
     '@nuxt/image'
   ],
 
@@ -47,4 +47,17 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2024-11-10',
+  future: {
+    compatibilityVersion: 4,
+  },
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'jules',
+      repo: 'magiczny-moment'
+    }
+  },
+  $production: {
+    studio: false
+  }
 })

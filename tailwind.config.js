@@ -17,7 +17,7 @@ export default {
       colors: {
         'accent': {
           DEFAULT: 'var(--color-accent)',
-          '600': 'hsl(from var(--color-accent) h s calc(l - 10))',
+          '600': 'color-mix(in srgb, var(--color-accent), black 10%)',
         }
       },
       animation: {
