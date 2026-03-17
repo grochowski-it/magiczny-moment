@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-viewport',
     '@nuxt/icon',
-    '@nuxthq/studio',
+    //'nuxt-studio',
     '@nuxt/image'
   ],
 
@@ -18,11 +18,11 @@ export default defineNuxtConfig({
   // Koniecznie ustaw hostname dla poprawnych URL-i w sitemapie
   site: { url: 'https://mm-event.pl' },
   sitemap: {
-  hostname: 'https://mm-event.pl',
-  gzip: true,
-  sources: [
-    '/api/sitemap/oferta' // Zakładając, że ten endpoint zwraca JSON w odpowiednim formacie
-  ]
+    hostname: 'https://mm-event.pl',
+    gzip: true,
+    sources: [
+      '/api/sitemap/oferta' // Zakładając, że ten endpoint zwraca JSON w odpowiednim formacie
+    ]
   },
   icon: {
     provider: 'iconify',
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   },
   image: {
     format: ['webp'],
-     screens: {
+    screens: {
       xs: 320,
       sm: 640,
       md: 768,
@@ -47,4 +47,17 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2024-11-10',
+  future: {
+    compatibilityVersion: 4,
+  },
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'jules',
+      repo: 'magiczny-moment'
+    }
+  },
+  $production: {
+    studio: false
+  }
 })

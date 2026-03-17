@@ -13,8 +13,10 @@
         <h2 class="mb-8 text-4xl font-bold !leading-snug md:text-6xl">
           Kontakt
         </h2>
-        <slot>
-        </slot>
+        <div class="flex flex-col gap-4">
+          <slot>
+          </slot>
+        </div>
       </div>
 
     </div>
