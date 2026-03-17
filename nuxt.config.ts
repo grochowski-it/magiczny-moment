@@ -18,11 +18,11 @@ export default defineNuxtConfig({
   // Koniecznie ustaw hostname dla poprawnych URL-i w sitemapie
   site: { url: 'https://mm-event.pl' },
   sitemap: {
-    hostname: 'https://mm-event.pl',
-    gzip: true,
-    sources: [
-      '/api/sitemap/oferta' // Zakładając, że ten endpoint zwraca JSON w odpowiednim formacie
-    ]
+  hostname: 'https://mm-event.pl',
+  gzip: true,
+  sources: [
+    '/api/sitemap/oferta' // Zakładając, że ten endpoint zwraca JSON w odpowiednim formacie
+  ]
   },
   icon: {
     provider: 'iconify',
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   },
   image: {
     format: ['webp'],
-    screens: {
+     screens: {
       xs: 320,
       sm: 640,
       md: 768,

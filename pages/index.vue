@@ -1,6 +1,7 @@
 <template>
-  <main class="bg-gray-900 text-accent">
-    <ContentRenderer :value="page" class="content-grid contents" />
+  <main class="bg-gray-900 content-grid text-accent">
+    <Navigation />
+    <ContentRenderer :value="page" class="contents" />
   </main>
 </template>
 
