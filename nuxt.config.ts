@@ -57,7 +57,4 @@ export default defineNuxtConfig({
       repo: 'magiczny-moment'
     }
   },
-  $production: {
-    studio: false
-  }
 })
