@@ -36,6 +36,6 @@ const { title, content, image, link } = toRefs(props)
 }
 
 .card {
-  @apply overflow-hidden relative select-none bg-gradient-to-br from-[#424249] via-gray-800 to-gray-800 rounded-xl;
+  @apply overflow-hidden relative select-none bg-gradient-to-br from-[#424249] via-gray-800 to-gray-800 rounded-xl h-full;
 }
 </style>
