@@ -1,5 +1,6 @@
 ---
 title: Strona główna
+description: Zabawa na Najwyższym Poziomie! Odkryj atrakcje, które zaskoczą Twoich gości.
 ---
 
 :navigation
