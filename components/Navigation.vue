@@ -19,9 +19,9 @@
         </a>
       </li>
       <li v-if="showDrawer" class="inline-block">
-        <span class="h-full pointer-events-auto link" @click="drawerVisiblity = !drawerVisiblity">
+        <button type="button" class="h-full pointer-events-auto link" :aria-expanded="drawerVisiblity" aria-controls="drawer" @click="drawerVisiblity = !drawerVisiblity">
           Więcej
-        </span>
+        </button>
       </li>
     </ul>
   </nav>

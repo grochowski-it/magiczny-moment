@@ -14,10 +14,10 @@
             </template>
           </div>
         </div>
-        <button class="hidden md:block absolute transform -translate-y-1/2 top-1/2 left-[-5ch] embla__prev" @click="scrollPrev">
+        <button type="button" aria-label="Poprzednia oferta" class="hidden md:block absolute transform -translate-y-1/2 top-1/2 left-[-5ch] embla__prev" @click="scrollPrev">
           <Icon name="icon-park-outline:arrow-left" />
         </button>
-        <button class="hidden md:block absolute transform -translate-y-1/2 top-1/2 right-[-5ch] embla__next" @click="scrollNext">
+        <button type="button" aria-label="Następna oferta" class="hidden md:block absolute transform -translate-y-1/2 top-1/2 right-[-5ch] embla__next" @click="scrollNext">
           <Icon name="icon-park-outline:arrow-right" />
         </button>
     </div>
