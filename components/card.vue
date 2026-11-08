@@ -1,6 +1,6 @@
 <template>
   <figure class="card">
-    <NuxtImg width="500" class="object-cover w-full h-full object-t30" :src="image" />
+    <NuxtImg width="500" height="375" sizes="sm:320px md:500px lg:640px" :alt="title" class="object-cover w-full h-full object-t30" :src="image" />
     <div
       class="absolute bottom-0 flex flex-row items-start justify-center w-full gap-2 p-4 md:justify-end md:flex-col h-fit md:h-2/6 bg-gray-900/80 md:bg-gradient-to-t md:from-gray-900/90 md:to-transparent">
       <h2 class="text-2xl font-bold">{{ title }}</h2>

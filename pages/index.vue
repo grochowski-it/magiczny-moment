@@ -8,4 +8,9 @@
 const { data: page } = await useAsyncData('index-page', () => {
   return queryCollection('content').path('/').first()
 })
+
+useSeoMeta({
+  title: 'Magiczny Moment Event — atrakcje na imprezy',
+  description: 'Wynajem atrakcji na imprezy: fotobudka 360, zimne ognie, ciężki dym, banki mydlane i inne efekty, które sprawią, że Twoje wydarzenie będzie niezapomniane.'
+})
 </script>

@@ -1,12 +1,10 @@
 import { queryCollection } from '@nuxt/content/server'
-import type { SitemapUrlInput } from '@nuxtjs/sitemap'
+import { defineSitemapEventHandler } from '#sitemap/server'
 
-export default defineEventHandler(async (event) => {
+export default defineSitemapEventHandler(async (event) => {
   const offers = await queryCollection(event, 'oferta').all()
-  return offers.map((offer) => {
-    return {
-      loc: offer.path,
-      lastmod: new Date().toISOString()
-    } satisfies SitemapUrlInput
-  })
+  return offers.map((offer) => ({
+    loc: offer.path,
+    lastmod: new Date().toISOString()
+  }))
 })

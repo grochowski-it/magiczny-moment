@@ -5,20 +5,22 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "nuxt typecheck",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@nuxt/content": "^3.12.0",
-    "@nuxt/fonts": "^0.10.3",
-    "@nuxt/icon": "^1.13.0",
-    "@nuxt/image": "1.10.0",
-    "@nuxtjs/sitemap": "7.6.0",
-    "@types/lodash-es": "^4.17.12",
+    "@dargmuesli/nuxt-cookie-control": "^9.3.12",
+    "@nuxt/content": "^3.16.2",
+    "@nuxt/fonts": "^1.2.0",
+    "@nuxt/icon": "^2.6.2",
+    "@nuxt/image": "2.2.1",
+    "@nuxtjs/seo": "^6.0.1",
     "embla-carousel-vue": "^8.6.0",
-    "lodash-es": "^4.17.21",
-    "nuxt": "^4.4.2",
-    "nuxt-studio": "1.4.0",
-    "nuxt-viewport": "^2.3.1",
+    "nuxt": "^4.6.4",
+    "nuxt-ai-ready": "^3.5.0",
+    "nuxt-studio": "1.8.0",
+    "nuxt-viewport": "^2.6.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
@@ -27,5 +29,8 @@
     "better-sqlite3": "^12.8.0",
     "postcss-calc": "^10.1.1",
     "postcss-custom-properties": "^15.0.1"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
   }
 }

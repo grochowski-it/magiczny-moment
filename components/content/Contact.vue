@@ -16,6 +16,16 @@
         <div class="flex flex-col gap-4">
           <slot>
           </slot>
+          <p class="text-base md:text-lg">
+            Obszar działania: Polska
+          </p>
+          <p class="text-sm opacity-70">
+            <NuxtLink to="/polityka-prywatnosci" class="underline">Polityka prywatności (RODO)</NuxtLink>
+            ·
+            <a href="tel:+48602434673">+48 602 434 673</a>
+            ·
+            <a href="mailto:magiczny.event@gmail.com">magiczny.event@gmail.com</a>
+          </p>
         </div>
       </div>
 

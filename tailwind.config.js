@@ -10,7 +10,7 @@ export default {
       textShadow: {
         'sm': '0 0px 2px black',
         DEFAULT: '0px 0px 4px black',
-        'md': '0px 0px 8px` black',
+        'md': '0px 0px 8px black',
         'lg': '0px 0px 30px black',
         'none': 'none'
       },
